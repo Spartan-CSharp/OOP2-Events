@@ -1,8 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Events
 {
@@ -10,19 +6,7 @@ namespace Events
 	{
 		public event EventHandler<string> LastNameChanged;
 
-		private string _firstName;
-
-		public string FirstName
-		{
-			get
-			{
-				return _firstName;
-			}
-			set
-			{
-				_firstName = value;
-			}
-		}
+		public string FirstName { get; set; }
 
 		private string _lastName;
 
@@ -49,7 +33,7 @@ namespace Events
 
 		public PersonModel(string firstName, string lastName)
 		{
-			_firstName = firstName;
+			FirstName = firstName;
 			_lastName = lastName;
 		}
 	}
